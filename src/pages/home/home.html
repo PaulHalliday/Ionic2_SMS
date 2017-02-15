@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      SMS Application
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-item>
+      <ion-label stacked>Phone Number</ion-label>
+      <ion-input [(ngModel)]="text.number" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Message</ion-label>
+      <ion-textarea [(ngModel)]="text.message"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button icon-left clear item-right (click)="sendTextMessage()">
+      <ion-icon name="checkmark"></ion-icon>
+      Send
+    </button>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
